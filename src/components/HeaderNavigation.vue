@@ -65,6 +65,8 @@
 </template>
 
 <script>
+import AOS from "aos";
+
 export default {
   name: "HeaderNavigation",
   data() {
@@ -91,6 +93,19 @@ export default {
     },
   },
   mounted() {
+    this.$nextTick(function () {
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init({
+          duration: 800,
+          delay: 300,
+        });
+      });
+
+      window.addEventListener("load", function () {
+        AOS.refresh();
+      });
+    });
+
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     var vh = window.innerHeight * 0.01;
 
