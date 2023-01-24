@@ -1,4 +1,4 @@
-# portfolio-2023-cli
+# portfolio-2023
 
 ## Project setup
 ```
