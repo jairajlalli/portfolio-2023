@@ -1,0 +1,58 @@
+.about {
+  position: relative;
+  text-align: center;
+  padding: 4rem 0;
+  
+  @include media-breakpoint-up(md) {    
+    padding: 6rem 0;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: $zindex-1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background: linear-gradient(rgba(3, 12, 45, 0), rgba(3, 12, 45, 1));
+  }
+
+  &__logo {
+    margin: 0 auto 2rem;
+    background: darken($clr-navy-dark, 1%);
+    border-radius: 50%;
+    padding: calc(2.2rem * 0.8);
+    width: calc(12rem * 0.8);
+    height: calc(12rem * 0.8);
+    
+    @include media-breakpoint-up(md) {
+      padding: calc(2.2rem * 0.9);
+      width: calc(12rem * 0.9);
+      height: calc(12rem * 0.9);
+    }
+    
+    @include media-breakpoint-up(xl) {
+      padding: 2.2rem;
+      width: 12rem;
+      height: 12rem;
+    }
+  }
+
+  &__text {
+    margin: 0 auto 1.5rem;
+    max-width: 48rem;
+    
+    @include media-breakpoint-up(sm) {
+      max-width: 53rem;
+    }
+  }
+
+  &__button {
+    margin: 0 1rem;
+    
+    @include media-breakpoint-up(sm) {
+      margin: 0 1.5rem;
+    }
+  }
+}

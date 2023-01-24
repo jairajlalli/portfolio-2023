@@ -1,0 +1,65 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  font-family: Butler, Times, Georgia, serif;
+  font-weight: 500;
+  line-height: 1;
+}
+
+h1,
+.h1 {
+  font-size: 5.6rem;
+  margin: 0 0 2rem 0;
+  
+  @include media-breakpoint-up(sm) {
+    @include font-size(8rem);
+  }
+  
+  @include media-breakpoint-up(xxl) {
+    font-size: 10rem;
+  }
+}
+
+h2,
+.h2,
+h4,
+.h4,
+h5,
+.h5 {
+  font-size: 4rem;
+  margin: 0 0 1.5rem 0;
+  
+  @include media-breakpoint-up(sm) {
+    @include font-size(6.6rem);
+  }
+  
+  @include media-breakpoint-up(xxl) {
+    font-size: 6.2rem;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 4rem;    
+  margin: 0 0 1.5rem 0;
+  
+  @include media-breakpoint-up(sm) {
+    @include font-size(6.6rem);
+  }
+  
+  @include media-breakpoint-up(md) {
+    @include font-size(7.8rem);
+    margin: 0 0 2rem 0;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 9rem;
+  }
+}

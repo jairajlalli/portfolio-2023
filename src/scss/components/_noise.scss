@@ -1,0 +1,26 @@
+.noise {
+  position: fixed;
+  z-index: $zindex5;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  pointer-events: none;
+  
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: $zindex2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(~@/assets/images/noise.png);
+    animation: none;
+    pointer-events: none;
+    display: block;
+    opacity: 0.5;
+    will-change: transform;
+  }
+}

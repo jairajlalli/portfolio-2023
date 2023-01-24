@@ -1,0 +1,15 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__list-item {
+    &:not(:last-of-type) {
+      margin: 0 2.8rem 1rem 0;
+    }
+  }
+
+  &__link {
+    font-weight: 300;
+    display: block;
+  }
+}

@@ -1,0 +1,150 @@
+.hero {
+  position: relative;
+  text-align: center;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: $zindex1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    height: calc(var(--vh, 1vh) * 20);
+    background: linear-gradient(rgba(4, 16, 60, 1), rgba(4, 16, 60, 0));
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25vh;
+    height: calc(var(--vh, 1vh) * 25);
+    background: linear-gradient(rgba(10, 22, 60, 0), rgba(10, 22, 60, 1));
+  }
+
+  &__overlay {
+    position: absolute;
+    z-index: $zindex1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+  }
+  
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  &__content {
+    z-index: $zindex1;
+    
+    a {
+      color: $clr-white;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+  
+  &__title {
+    position: relative;
+    margin: 0 0 0.5rem 0;    
+    height: 5.65rem;
+    
+    @include media-breakpoint-up(sm) {
+      height: calc(2.61rem + 3.71vw);
+    }
+    
+    @include media-breakpoint-up(xxl) {
+      height: 10rem;
+    }
+  }
+  
+  &__heading {
+    margin: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    
+    &:nth-child(1) {
+      color: $clr-magenta;
+      animation: glitch 3s infinite forwards;
+      animation-delay: 2.5s;
+    }
+    
+    &:nth-child(2) {
+      color: $clr-cyan;
+      animation: glitchTwo 2.25s infinite forwards;
+      animation-delay: 2.5s;
+    } 
+    
+    &:nth-child(3) {
+      color: $clr-white;
+      animation: glitchThree 1.5s infinite forwards;
+      animation-delay: 2.5s;
+    }
+  }  
+
+  &__text {
+    font-weight: 400;
+    text-shadow: 0 0 0.7rem rgb(0 0 0 / 50%);
+    margin: 0;
+  }
+  
+  &__social {
+    position: relative;
+    z-index: $zindex1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+
+    li {
+      margin: 0 0.5rem;
+      list-style: none;
+  
+      a {
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        svg {
+          color: $clr-white;
+          transition: color $transition-default;
+          width: 2.2rem;
+          height: 2.2rem;
+        }
+      }
+    }
+  }
+
+  &__email {
+    &:hover {
+      svg {
+        color: $clr-cyan;
+      }
+    }
+  }
+
+  &__linkedin {
+    &:hover {
+      svg {
+        color: $clr-magenta;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+ol,
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    @include base-paragraph-styles;
+  }
+
+  &:not([class]) {
+    padding: 0 0 0 1.7rem;
+    margin: 0 0 2.5rem 0;
+
+    @include media-breakpoint-up(sm) {
+      margin: 0 0 3.5rem 0;
+    }
+  }
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+
+  &:not([class]) {
+    li {
+      padding: 0;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: $zindex1;
+        pointer-events: none;
+        background-color: $clr-white;
+        border-radius: 50%;
+        height: 0.7rem;
+        width: 0.7rem;
+        left: -1.7rem;
+        top: 1.2rem;
+
+        @include media-breakpoint-up(sm) {
+          top: 1.3rem;
+        }
+
+        @include media-breakpoint-up(xxl) {
+          top: 1.6rem;
+        }
+      }
+    }
+  }
+}

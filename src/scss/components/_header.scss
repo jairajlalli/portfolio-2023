@@ -1,0 +1,23 @@
+.header {
+  width: 100%;
+  position: absolute;
+  z-index: $zindex4;
+  padding: 2rem 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    margin: 0 2rem 0 0;
+    width: calc(6.5rem * 0.85);
+    height: calc(5.961rem * 0.85);
+    
+    @include media-breakpoint-up(md) {
+      width: 6.5rem;
+      height: 5.961rem;
+    }
+  }
+}

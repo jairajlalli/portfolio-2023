@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Butler";
+  src: url("~@/assets/fonts/Butler-Medium.woff2") format("woff2"),
+    url("~@/assets/fonts/Butler-Medium.woff") format("woff"),
+    url("~@/assets/fonts/Butler-Medium.ttf") format("truetype"),
+    url("~@/assets/fonts/Butler-Medium.svg#Butler-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("~@/assets/fonts/Poppins-Medium.woff2") format("woff2"),
+    url("~@/assets/fonts/Poppins-Medium.woff") format("woff"),
+    url("~@/assets/fonts/Poppins-Medium.ttf") format("truetype"),
+    url("~@/assets/fonts/Poppins-Medium.svg#Poppins-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

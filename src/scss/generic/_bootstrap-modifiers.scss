@@ -1,0 +1,11 @@
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm,
+.container {
+  @include media-breakpoint-down(sm) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}

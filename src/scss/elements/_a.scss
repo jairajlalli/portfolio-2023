@@ -1,0 +1,7 @@
+a {
+  @include base-paragraph-styles;
+  outline: none;
+  text-decoration: underline;
+  color: inherit;
+  transition: $transition-default;
+}

@@ -1,0 +1,15 @@
+p,
+.paragraph {
+  @include base-paragraph-styles;
+  margin: 0 0 2.5rem 0;
+
+  &--small,
+  &--small a {
+    font-size: 1.2rem;
+    line-height: 2;
+  }
+
+  &--bold {
+    font-weight: bold;
+  }
+}
