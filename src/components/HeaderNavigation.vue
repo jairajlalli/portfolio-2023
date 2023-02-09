@@ -52,6 +52,7 @@
                     :href="item.url"
                     class="menu__link"
                     @click="onMenuItemClick"
+                    target="_blank"
                     >{{ item.title }}</a
                   >
                 </li>
@@ -71,13 +72,15 @@ export default {
   name: "HeaderNavigation",
   data() {
     return {
-      logoUrl: "/#home",
+      logoUrl: "javascript:void(0)",
       logoLabel: "Jairaj Lalli logo",
       hamburgerLabel: "Open navigation",
       navItems: [
-        { url: "/#home", title: "Home" },
-        { url: "/#about", title: "About" },
-        { url: "/#portfolio", title: "Portfolio" },
+        { url: "mailto:jairaj@jairajlalli.co.uk", title: "Send a Message" },
+        {
+          url: "https://www.linkedin.com/in/jairajlalli/",
+          title: "View on LinkedIn",
+        },
       ],
       isActive: false,
     };
